@@ -54,7 +54,7 @@ public class Toolbar extends JFrame implements ActionListener, ItemListener,
 	private JCheckBox fillCheckBox;
 	private Color currentColor = Color.black;
 	private Color fillColor = Color.black;
-	private JButton clearButton, undoButton, redoButton, saveButton, submitButton, testButton, currColorButton, fillColorButton;
+	private JButton clearButton, undoButton, redoButton, saveButton, submitButton, hallButton, testButton, currColorButton, fillColorButton;
 	private boolean clearState = false;
 	private boolean undoState = false;
 	private boolean redoState = false;
@@ -225,6 +225,10 @@ public class Toolbar extends JFrame implements ActionListener, ItemListener,
 		submitButton.addActionListener(this);
 		container.add(submitButton);
 		
+		hallButton = new JButton("View Hall of Fame");
+		hallButton.addActionListener(this);
+		container.add(hallButton);
+		
 		setSize(width, height);
 		setLocation(500, 100);
 		setVisible(true);
@@ -337,6 +341,19 @@ public class Toolbar extends JFrame implements ActionListener, ItemListener,
 			{
 				DisplayPageGenerator dpg = new DisplayPageGenerator(offScreenImage, fileName, parent);
 				dpg.uploadFile();
+			}
+		}
+		else if(e.getSource() == hallButton)
+		{
+			String url = "http://www.spencerbartz.com/applets/simpledraw/halloffame.php"; 
+			try
+			{
+				java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+			}
+			catch (IOException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 		}
 		//For checking stack contents
