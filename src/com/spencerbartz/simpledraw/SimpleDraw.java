@@ -9,7 +9,7 @@ public class SimpleDraw
 	{
 		try 
 		{
-            // Set System Look & Feel
+			// Set System Look & Feel
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} 
 		catch(UnsupportedLookAndFeelException e) 
