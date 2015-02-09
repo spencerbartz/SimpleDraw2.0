@@ -141,15 +141,15 @@ public class Toolbar extends JFrame implements ActionListener, ItemListener,
 			InputStream input = classLoader.getResourceAsStream("rectangle.gif");
 			rectangleIcon = new ImageIcon(ImageIO.read(input));
 			input = classLoader.getResourceAsStream("oval.gif");
-			rectangleIcon = new ImageIcon(ImageIO.read(input));
+			ovalIcon = new ImageIcon(ImageIO.read(input));
 			input = classLoader.getResourceAsStream("line.gif");
-			rectangleIcon = new ImageIcon(ImageIO.read(input));
+			lineIcon = new ImageIcon(ImageIO.read(input));
 			input = classLoader.getResourceAsStream("pencil.gif");
-			rectangleIcon = new ImageIcon(ImageIO.read(input));
+			pencilIcon = new ImageIcon(ImageIO.read(input));
 			input = classLoader.getResourceAsStream("paintbucket.gif");
-			rectangleIcon = new ImageIcon(ImageIO.read(input));
+			paintbucketIcon = new ImageIcon(ImageIO.read(input));
 			input = classLoader.getResourceAsStream("paintbucketcursor.gif");
-			rectangleIcon = new ImageIcon(ImageIO.read(input));
+			paintbucketCursor = new ImageIcon(ImageIO.read(input));
 		}
 		catch(NullPointerException e)
 		{

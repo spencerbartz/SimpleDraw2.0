@@ -43,6 +43,8 @@ public class SimpleDrawUI extends JFrame implements MouseListener,
 	// set up GUI and register mouse event handler
 	public SimpleDrawUI()
 	{
+		super("Simple Draw 2.0");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(width, height);
 
 		// create a label and place it in SOUTH of BorderLayout
